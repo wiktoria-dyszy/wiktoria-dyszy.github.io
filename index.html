@@ -39,25 +39,36 @@ http://www.tooplate.com/view/2109-the-card
           <a class="tm-navbar-menu" href="#">Menu</a>
           <ul class="tm-nav-links">
             <li class="tm-nav-item active">
-              <a href="#" data-linkid="0" data-align="right" class="tm-nav-link">Intro</a>
+              <a href="#" data-linkid="0" data-align="right" class="tm-nav-link"
+                >Intro</a
+              >
             </li>
             <li class="tm-nav-item">
-              <a href="#" data-linkid="1" data-align="right" class="tm-nav-link">About</a>
+              <a href="#" data-linkid="1" data-align="right" class="tm-nav-link"
+                >About</a
+              >
             </li>
             <li class="tm-nav-item">
               <a
                 href="#"
                 data-linkid="2"
                 data-align="middle"
-                class="tm-nav-link">Work</a>
+                class="tm-nav-link"
+                >Work</a
+              >
             </li>
             <li class="tm-nav-item">
-              <a href="#" data-linkid="3" data-align="left" class="tm-nav-link">Contact</a>
+              <a href="#" data-linkid="3" data-align="left" class="tm-nav-link"
+                >Contact</a
+              >
             </li>
             <li class="tm-nav-item">
               <a
-                rel="nofollow" href="https://fb.com/tooplate"
-                class="tm-nav-link external">External</a>
+                rel="nofollow"
+                href="https://fb.com/tooplate"
+                class="tm-nav-link external"
+                >External</a
+              >
             </li>
           </ul>
         </nav>
@@ -77,17 +88,24 @@ http://www.tooplate.com/view/2109-the-card
             <div class="tm-content">
               <!-- Section 0 Introduction -->
               <section class="tm-section tm-section-0">
-                <h2 class="tm-section-title mb-3 font-weight-bold">
-                  O mnie
-                </h2>
+                <h2 class="tm-section-title mb-3 font-weight-bold">O mnie</h2>
                 <div class="tm-textbox tm-bg-dark">
                   <p>
-                    Hej, jestem Wiktoria i zapraszam Cię do zapoznania się z moją twórczością. Uwielbiam podróżować i odkrywać piękno tego świata, jeździć na snowboardzie i programować w R. Ukończyłam studia magisterskie na uniwersyetcie im. Adama Mickiewicza w Pozaniu. Aktualnie pracuje dla IMGW. Ze mną nie będziesz się nudzić 😊</p>
+                    Hej, jestem Wiktoria i zapraszam Cię do zapoznania się z
+                    moją twórczością. Uwielbiam podróżować i odkrywać piękno
+                    tego świata, jeździć na snowboardzie i programować w R.
+                    Ukończyłam studia magisterskie na uniwersyetcie im. Adama
+                    Mickiewicza w Pozaniu. Aktualnie pracuje dla IMGW. Ze mną
+                    nie będziesz się nudzić 😊
+                  </p>
                   <p class="mb-0">
-                    Please tell your friends about Tooplate for free templates. This is 70% alpha background.
+                    Please tell your friends about Tooplate for free templates.
+                    This is 70% alpha background.
                   </p>
                 </div>
-                <a href="#" id="tm_about_link" data-linkid="1" class="tm-link">Read More</a>
+                <a href="#" id="tm_about_link" data-linkid="1" class="tm-link"
+                  >Read More</a
+                >
               </section>
 
               <!-- Section 1 About Me -->
@@ -102,6 +120,8 @@ http://www.tooplate.com/view/2109-the-card
                     You are NOT allowed to re-distribute this template file on
                     your site for any reason. Thank you.
                   </p>
+                  <h6>Pralnia | Nikola Skopowska</h6>
+                  <br />
                   <a
                     href="#"
                     id="tm_work_link"
@@ -296,13 +316,8 @@ http://www.tooplate.com/view/2109-the-card
       </div>
 
       <div class="tm-bottom-container">
-       
-
         <!-- Footer -->
-        <footer>
-          || Copyright &copy; 2024 Wiktoria Dyszy || 
-                  
-        </footer>
+        <footer>|| Copyright &copy; 2024 Wiktoria Dyszy ||</footer>
       </div>
     </div>
 
@@ -319,7 +334,7 @@ http://www.tooplate.com/view/2109-the-card
       let links;
       let eachNavLink;
 
-      window.onload = function() {
+      window.onload = function () {
         $("body").addClass("loaded");
       };
 
@@ -344,7 +359,7 @@ http://www.tooplate.com/view/2109-the-card
         $(`.tm-nav-item:eq(${currentImageId})`).addClass("active");
 
         // Change page content
-        $(`.tm-section-${previousImageId}`).fadeOut(function(e) {
+        $(`.tm-section-${previousImageId}`).fadeOut(function (e) {
           $(`.tm-section-${currentImageId}`).fadeIn();
           // Gallery
           if (currentImageId === 2) {
@@ -355,7 +370,7 @@ http://www.tooplate.com/view/2109-the-card
         adjustFooter();
       }
 
-      $(document).ready(function() {
+      $(document).ready(function () {
         // Set first page
         $(".tm-section").fadeOut(0);
         $(".tm-section-0").fadeIn();
@@ -367,11 +382,11 @@ http://www.tooplate.com/view/2109-the-card
             "img/photo-02.jpg",
             "img/photo-03.jpg",
             "img/photo-04.jpg",
-            "img/photo-05.jpg"
+            "img/photo-05.jpg",
           ],
           fadeSpeed: 2000,
           duration: -1,
-          backgroundSize: SCALING_MODE_COVER
+          backgroundSize: SCALING_MODE_COVER,
         });
 
         eachNavLink = $(".tm-nav-link");
@@ -390,7 +405,7 @@ http://www.tooplate.com/view/2109-the-card
         // Each menu item click
         eachNavLink.on("click", navLinkClick);
 
-        $(".tm-navbar-menu").click(function(e) {
+        $(".tm-navbar-menu").click(function (e) {
           if (links.hasClass("open")) {
             links.fadeOut();
           } else {
@@ -401,7 +416,7 @@ http://www.tooplate.com/view/2109-the-card
         });
 
         // window resize
-        $(window).resize(function() {
+        $(window).resize(function () {
           // If current page is Gallery page, set it up
           if (currentImageId === 2) {
             setupSlider();
@@ -455,7 +470,7 @@ http://www.tooplate.com/view/2109-the-card
 
         $(".tm-gallery").slick({
           dots: true,
-          customPaging: function(slider, i) {
+          customPaging: function (slider, i) {
             var thumb = $(slider.$slides[i]).data();
             return `<a>${i + 1}</a>`;
           },
@@ -463,7 +478,7 @@ http://www.tooplate.com/view/2109-the-card
           prevArrow: false,
           nextArrow: false,
           slidesToShow: slidesToShow,
-          slidesToScroll: slidesToScroll
+          slidesToScroll: slidesToScroll,
         });
 
         // Open big image when a gallery image is clicked.
@@ -471,8 +486,8 @@ http://www.tooplate.com/view/2109-the-card
           delegate: "a",
           type: "image",
           gallery: {
-            enabled: true
-          }
+            enabled: true,
+          },
         });
       }
     </script>
